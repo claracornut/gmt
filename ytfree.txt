@@ -1,0 +1,8 @@
+ytfree
+
+sudo ./venv/bin/python3 ~/green-metrics-tool/runner.py --uri ~/youtube/free --name intentoyt1-26f
+
+# Cuando se modifica el measure.py
+
+cd /home/arturogamarra/youtube/free
+docker build -t prueba-youtube .

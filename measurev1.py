@@ -10,7 +10,7 @@ def run():
       page = context.new_page()
 
         # Vamos a un video (elige uno que sepas que tiene anuncios al principio)
-      page.goto("https://youtu.be/8YxQLBRBpJI?si=_cKbfymj5srQp6Et")
+      page.goto("https://www.youtube.com/watch?v=8YxQLBRBpJI&list=PLv8ReycPcD1ee1htykmUvTdQh2HMYbRWo ")
         
         # NOTA: En Europa, YouTube suele pedir aceptar cookies. 
         # Intentamos hacer clic en "Aceptar todo" si aparece el botón.
@@ -20,15 +20,7 @@ def run():
           pass # Si no aparece, seguimos
 
         # Reproducimos durante 60 segundos
-      time.sleep(161)
-      
-      page.goto("https://youtu.be/cX24KlL8klY?si=RsC-1I7-41AomOot")
-      
-      time.sleep(186)
-      
-      page.goto("https://youtu.be/Y4J_NYAQQEQ?si=j-uW3sTEo6I8c9yE")
-      
-      time.sleep(181)
+      time.sleep(60)
 
       browser.close()
 
