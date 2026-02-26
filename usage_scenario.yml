@@ -6,6 +6,7 @@ version: 1
 services:
   browser-client:
     image: prueba-youtube
+    command: sleep infinity
 
 flow:
   - name: PlayVideo
