@@ -1,0 +1,15 @@
+name: "YouTube Free" # Cambia esto a "YouTube AdBlock" o "YouTube Premium" según corresponda
+author: "Arturo"
+version: 1
+
+services:
+  browser-client:
+    build: .
+
+flow:
+  - name: PlayVideo
+    container: browser-client
+    commands:
+      - type: console
+        command: python measure.py
+        note: "Reproduciendo video de YouTube"
