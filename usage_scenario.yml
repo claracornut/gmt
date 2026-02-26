@@ -1,5 +1,6 @@
 name: "YouTube Free" # Cambia esto a "YouTube AdBlock" o "YouTube Premium" según corresponda
 author: "Arturo"
+description: Measuring youtube free version
 version: 1
 
 services:
