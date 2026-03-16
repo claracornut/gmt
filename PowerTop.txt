@@ -1,0 +1,2 @@
+#Ejecutar con el ordenador desenchufado
+sudo powertop --csv=youtubePremium.csv --time=560

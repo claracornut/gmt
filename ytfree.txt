@@ -6,3 +6,6 @@ sudo ./venv/bin/python3 ~/green-metrics-tool/runner.py --uri ~/youtube/free --na
 
 cd /home/arturogamarra/youtube/free
 docker build -t prueba-youtube .
+
+# MEdir potencia media (modificar segundos)
+sudo turbostat -i 565 --show PkgWatt
