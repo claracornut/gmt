@@ -15,5 +15,5 @@ flow:
     container: browser-client
     commands:
       - type: console
-        command: python measureAdGuard.py
+        command: python measureAdBlockPlus.py
         note: "laying YouTube video"
