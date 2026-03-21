@@ -4,12 +4,18 @@ import time
 
 def run():
     with sync_playwright() as p:
-        # Como GMT copia los archivos a /app en el contenedor Docker, la ruta será esta:
+
+        # Since GMT copies the files to /app in the Docker container,
+        # the path will be this one:
+
         path_to_extension = "/app/ublock"
 
-        # Lanzamos Chromium usando un contexto persistente para poder inyectar la extensión
+
+        # Launch Chromium using a persistent context
+        # so that the extension can be injected
+        
         context = p.chromium.launch_persistent_context(
-            user_data_dir="/tmp/playwright-user-data", # Carpeta temporal necesaria
+            user_data_dir="/tmp/playwright-user-data", # Temporary folder required
             headless=True,
             args=[
                 f"--disable-extensions-except={path_to_extension}",
@@ -18,13 +24,14 @@ def run():
             ]
         )
 
-        # En un contexto persistente, el navegador ya trae una página abierta por defecto
+
+        # In a persistent context, the browser already opens one page by default
         page = context.pages[0]
 
         # --- VIDEO 1 ---
         page.goto("https://youtu.be/8YxQLBRbpJI?si=_cKbfymj5srQp6Et", timeout=60000, wait_until="domcontentloaded")
-        
-        # Intentamos aceptar cookies si salen
+
+        # Try to accept cookies if they appear
         try:
             page.click("button:has-text('Accept all')", timeout=5000)
         except:
@@ -40,7 +47,7 @@ def run():
         page.goto("https://youtu.be/Y4J_NYAQQEQ?si=j-uW3sTEo6I8c9yE", timeout=60000, wait_until="domcontentloaded")
         time.sleep(181)
 
-        # Cerramos el contexto
+        # Close the context
         context.close()
 
 if __name__ == "__main__":
