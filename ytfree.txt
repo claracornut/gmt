@@ -2,10 +2,10 @@ ytfree
 
 sudo ./venv/bin/python3 ~/green-metrics-tool/runner.py --uri ~/youtube/free --name intentoyt1-26f
 
-# Cuando se modifica el measure.py
+# When measure.py is modified
 
-cd /home/arturogamarra/youtube/free
+cd /home/claracornut/youtube/free
 docker build -t prueba-youtube .
 
-# MEdir potencia media (modificar segundos)
+# Measure average power (modify seconds)
 sudo turbostat -i 565 --show PkgWatt

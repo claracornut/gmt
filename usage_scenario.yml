@@ -1,5 +1,5 @@
-name: "YouTube Free" # Cambia esto a "YouTube AdBlock" o "YouTube Premium" según corresponda
-author: "Arturo"
+name: "YouTube Free" # Change this to "YouTube AdBlock" or "YouTube Premium" as appropriate
+author: "Arturo, Clara"
 description: Measuring youtube free version
 version: 1
 
@@ -16,4 +16,4 @@ flow:
     commands:
       - type: console
         command: python measure.py
-        note: "Reproduciendo video de YouTube"
+        note: "laying YouTube video"

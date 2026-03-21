@@ -1,19 +1,22 @@
-# measure.py - YouTube Premium (Usando sesión guardada)
+# measure.py - YouTube Premium (Using saved session)
 from playwright.sync_api import sync_playwright
 import time
 
 def run():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        
-        # Le decimos a Playwright que cargue tu sesión Premium
-        # Como GMT copia los archivos a /app, la ruta es esta:
-        context = browser.new_context(storage_state="/app/premium_state.json")
+
+        # Tell Playwright to load your Premium session
+        # Since GMT copies the files to /app, this is the path:
+context = browser.new_context(storage_state="/app/premium_state.json")
         page = context.new_page()
 
         # --- VIDEO 1 ---
         page.goto("https://youtu.be/8YxQLBRbpJI?si=_cKbfymj5srQp6Et", timeout=60000, wait_until="domcontentloaded")
-        # Ya no necesitamos buscar el botón de cookies porque al estar logueado ya están aceptadas
+
+        # We no longer need to look for the cookies button because,
+        # since we are logged in, they are already accepted
+
         time.sleep(161)
 
         # --- VIDEO 2 ---

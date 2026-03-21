@@ -4,28 +4,30 @@ import time
 
 def run():
     with sync_playwright() as p:
-        # Lanzamos Chromium en modo headless (sin interfaz gráfica para el contenedor)
+        # Launch Chromium in headless mode (without graphical interface for the container)
       browser = p.chromium.launch(headless=True)
-      #browser = p.chromium.launch(headless=False)
+        #browser = p.chromium.launch(headless=False)
       context = browser.new_context()
       page = context.new_page()
 
-        # Vamos a un video (elige uno que sepas que tiene anuncios al principio)
+
+        # Go to a video (choose one that you know has ads at the beginning)
       page.goto("https://youtu.be/8YxQLBRBpJI?si=_cKbfymj5srQp6Et", timeout=60000, wait_until="domcontentloaded")
         
-        # NOTA: En Europa, YouTube suele pedir aceptar cookies. 
-        # Intentamos hacer clic en "Aceptar todo" si aparece el botón.
+        # NOTE: In Europe, YouTube usually asks to accept cookies.        
+        # We try to click "Accept all" if the button appears.
       try:
           page.click("button:has-text('Accept all')", timeout=5000)
       except:
-          pass # Si no aparece, seguimos
+          pass # If it does not appear, continue
           
       try:
           page.click("button:has-text('Aceptar todo')", timeout=5000)
       except:
-          pass # Si no aparece, seguimo
+          pass # If it does not appear, continue
 
-        # Reproducimos durante 60 segundos
+
+      # Play for 60 seconds
       time.sleep(161)
       #time.sleep(15)
       
