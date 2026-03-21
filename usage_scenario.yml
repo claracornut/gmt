@@ -6,6 +6,8 @@ version: 1
 services:
   browser-client:
     image: prueba-youtube
+    build:
+      context: .
     command: sleep infinity
 
 flow:
