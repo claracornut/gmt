@@ -3,7 +3,8 @@ FROM mcr.microsoft.com/playwright/python:v1.40.0-jammy
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
+# the folowing line copy the hole repository (including ublock and adguard)
+COPY . . 
 
-# Instalar los navegadores de Playwright
+# Installation of playrigth chromium
 RUN playwright install chromium
