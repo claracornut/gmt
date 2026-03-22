@@ -11,9 +11,9 @@ services:
     command: sleep infinity
 
 flow:
-  - name: PlayVideoÒ
+  - name: PlayVideo
     container: browser-client
     commands:
       - type: console
-        command: python measure_ytb_noAddBlock.py
+        command: python measure_ytb_AdGuard.py
         note: "laying YouTube video"
