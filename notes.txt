@@ -1,7 +1,24 @@
-# pour voir toutes les images et containers :
+## commandes de base
+# pour voir toutes les images et containers : (être dans le dossier green-metrics-tool ?)
 docker ps
 
-# pour se connecter à la db
+# pour activer venv
+source venv/bin/activate
+
+# pour lancer un test (être dans le dossier green-metrics-tool)
+python3 runner.py --uri ~/gmt --name "testUblock"
+
+## conventions choisies
+# noms à donner pour les mesures 
+    ytb-Ublock
+    ytb-AdGuard
+    ytb-AdBlockPlus
+    ytb-noAddBlock
+    ytb-premium
+
+## db
+
+# pour se connecter à la db (être dans le dossier docker ?)
 psql -h localhost -p 9573 -U postgres -d green-coding
 
 # requete sql qui crée le fichier csv avec les moyennes 
@@ -78,7 +95,7 @@ psql -h localhost -p 9573 -U postgres -d green-coding -c "\COPY (SELECT r.name A
  public | warnings                    | table | postgres
  public | watchlist                   | table | postgres
 
-# table runs (commande SELECT * FROM runs);
+# table runs (commande : SELECT * FROM runs);
                   id                  |      name       |          created_at           
 --------------------------------------+-----------------+-------------------------------
  23ad03a5-52ac-45f4-9aff-3e3423389b6e | testAdBlockPlus | 2026-03-21 18:47:00.825505+01

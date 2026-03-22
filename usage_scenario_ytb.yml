@@ -1,0 +1,19 @@
+name: "YouTube Free" # Change this to "YouTube AdBlock" or "YouTube Premium" as appropriate
+author: "Arturo"
+description: Measuring youtube free version
+version: 1
+
+services:
+  browser-client:
+    image: prueba-youtube
+    build:
+      context: .
+    command: sleep infinity
+
+flow:
+  - name: PlayVideo
+    container: browser-client
+    commands:
+      - type: console
+        command: python measureAdBlockPlus.py
+        note: "laying YouTube video"
