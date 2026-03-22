@@ -1,11 +1,11 @@
 name: "LeRobert - no addBlock" 
 author: "Clara"
-description: Measuring youtube free version
+description: Measuring Le Robert - no add blocker
 version: 1
 
 services:
   browser-client:
-    image: prueba_leRobert
+    image: prueba-leRobert
     build:
       context: .
     command: sleep infinity

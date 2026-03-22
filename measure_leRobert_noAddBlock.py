@@ -22,25 +22,25 @@ def run():
         
         # Search for a word
         page.goto("https://dictionnaire.lerobert.com/definition/iel", timeout=60000, wait_until="domcontentloaded")
-        time.sleep(60)
+        time.sleep(120)
         
         # Search for a word
         page.goto("https://dictionnaire.lerobert.com/definition/caca", timeout=60000, wait_until="domcontentloaded")
-        time.sleep(60)
+        time.sleep(120)
 
         # Search for a word
         page.goto("https://dictionnaire.lerobert.com/definition/ascenseur", timeout=60000, wait_until="domcontentloaded")
-        time.sleep(60)
+        time.sleep(120)
 
         # Search for synonyms of a word
         page.goto("https://dictionnaire.lerobert.com/synonymes/cool", timeout=60000, wait_until="domcontentloaded")
-        time.sleep(60)
+        time.sleep(120)
 
         # Search for synonyms of a word
         page.goto("https://dictionnaire.lerobert.com/synonymes/caca", timeout=60000, wait_until="domcontentloaded")
-        time.sleep(60)
+        time.sleep(120)
 
-      browser.close()
+        browser.close()
 
 if __name__ == "__main__":
     run()
