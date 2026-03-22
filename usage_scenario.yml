@@ -1,19 +1,19 @@
-name: "LeRobert - no addBlock" 
-author: "Clara"
-description: Measuring Le Robert - no add blocker
+name: "YouTube Free" # Change this to "YouTube AdBlock" or "YouTube Premium" as appropriate
+author: "Arturo"
+description: Measuring youtube free version
 version: 1
 
 services:
   browser-client:
-    image: prueba-leRobert
+    image: prueba-youtube
     build:
       context: .
     command: sleep infinity
 
 flow:
-  - name: SearchWords
+  - name: PlayVideoÒ
     container: browser-client
     commands:
       - type: console
-        command: python measure_leRobert_noAddBlock.py
-        note: "serching for words"
+        command: python measure_ytb_noAddBlock.py
+        note: "laying YouTube video"
