@@ -1,0 +1,4 @@
+categorie,nb_runs,energie_cpu_moyenne_uj,ecart_type_cpu,energie_gpu_moyenne_uj,duree_moyenne_us
+testAdBlockPlus,1,763025779,,195983677,1303830252
+testAdGuard,2,484486045,10556366,1416932,1377895272
+testUblock,2,350788140,37450666,6746692,1333555341

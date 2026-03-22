@@ -26,6 +26,11 @@ def run():
       except:
           pass # If it does not appear, continue
 
+      try:
+          page.click("button:has-text('Tout accepter')", timeout=5000)
+      except:
+          pass # If it does not appear, continue
+
 
       # Play for 60 seconds
       time.sleep(161)
