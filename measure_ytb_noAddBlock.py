@@ -12,7 +12,7 @@ def run():
 
 
         # Go to a video (choose one that you know has ads at the beginning)
-      page.goto("https://youtu.be/8YxQLBRBpJI?si=_cKbfymj5srQp6Et", timeout=60000, wait_until="domcontentloaded")
+      page.goto("https://youtu.be/8YxQLBRBpJI?si=WqOA2tSgWDM5BMKB", timeout=60000, wait_until="domcontentloaded")
         
         # NOTE: In Europe, YouTube usually asks to accept cookies.        
         # We try to click "Accept all" if the button appears.
@@ -36,11 +36,11 @@ def run():
       time.sleep(161)
       #time.sleep(15)
       
-      page.goto("https://youtu.be/cX24KlL8klY?si=RsC-1I7-41AomOot", timeout=60000, wait_until="domcontentloaded")
+      page.goto("https://youtu.be/cX24KlL8klY?si=havUAEjKDooz68T_", timeout=60000, wait_until="domcontentloaded")
       
       time.sleep(186)
       
-      page.goto("https://youtu.be/Y4J_NYAQQEQ?si=j-uW3sTEo6I8c9yE", timeout=60000, wait_until="domcontentloaded")
+      page.goto("https://youtu.be/Y4J_NYAQQEQ?si=BLcMRRYQMqy0-23l", timeout=60000, wait_until="domcontentloaded")
       
       time.sleep(181)
 

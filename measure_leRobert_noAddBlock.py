@@ -20,6 +20,8 @@ def run():
         except:
             pass # If it does not appear, continue
         
+        time.sleep(120)
+
         # Search for a word
         page.goto("https://dictionnaire.lerobert.com/definition/iel", timeout=60000, wait_until="domcontentloaded")
         time.sleep(120)
