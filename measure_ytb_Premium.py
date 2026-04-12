@@ -8,7 +8,7 @@ def run():
 
         # Tell Playwright to load your Premium session
         # Since GMT copies the files to /app, this is the path:
-context = browser.new_context(storage_state="/app/premium_state.json")
+        context = browser.new_context(storage_state="/app/premium_state.json")
         page = context.new_page()
 
         # --- VIDEO 1 ---

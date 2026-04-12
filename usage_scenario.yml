@@ -1,6 +1,6 @@
-name: "YouTube Ublock" # Change this to "YouTube AdBlock" or "YouTube Premium" as appropriate
-author: "Arturo"
-description: Measuring youtube free version
+name: "YouTube premium" # Change this to "YouTube AdBlock" or "YouTube Premium" as appropriate
+author: "Arturo & Clara"
+description: Measuring youtube premium
 version: 1
 
 services:
@@ -15,5 +15,5 @@ flow:
     container: browser-client
     commands:
       - type: console
-        command: python measure_ytb_Ublock.py
+        command: python measure_ytb_Premium.py
         note: "laying YouTube video"
