@@ -47,19 +47,19 @@ SELECT
   name AS categorie,
   COUNT(*) AS n_runs_valides,
   AVG(duration_video_s)                    AS avg_duration_video_s,
-  AVG(gpu_carbon_powermetrics_component)   AS gpu_carbon_powermetrics_component,
-  AVG(energy_impact_powermetrics_vm)       AS energy_impact_powermetrics_vm,
-  AVG(cores_power_powermetrics_component)  AS cores_power_powermetrics_component,
-  AVG(disk_total_byteswritten_powermetrics_vm) AS disk_total_byteswritten_powermetrics_vm,
-  AVG(disk_total_bytesread_powermetrics_vm)    AS disk_total_bytesread_powermetrics_vm,
-  AVG(embodied_carbon_share_machine)       AS embodied_carbon_share_machine,
-  AVG(cpu_time_powermetrics_vm)            AS cpu_time_powermetrics_vm,
-  AVG(gpu_power_powermetrics_component)    AS gpu_power_powermetrics_component,
-  AVG(cpu_utilization_mach_system)         AS cpu_utilization_mach_system,
-  AVG(disk_io_bytesread_powermetrics_vm)   AS disk_io_bytesread_powermetrics_vm,
-  AVG(cores_carbon_powermetrics_component) AS cores_carbon_powermetrics_component,
-  AVG(gpu_energy_powermetrics_component)   AS gpu_energy_powermetrics_component,
-  AVG(cores_energy_powermetrics_component) AS cores_energy_powermetrics_component
+  AVG(gpu_carbon_powermetrics_component)   AS avg_gpu_carbon_powermetrics_component,
+  AVG(energy_impact_powermetrics_vm)       AS avg_energy_impact_powermetrics_vm,
+  AVG(cores_power_powermetrics_component)  AS avg_cores_power_powermetrics_component,
+  AVG(disk_total_byteswritten_powermetrics_vm) AS avg_disk_total_byteswritten_powermetrics_vm,
+  AVG(disk_total_bytesread_powermetrics_vm)    AS avg_disk_total_bytesread_powermetrics_vm,
+  AVG(embodied_carbon_share_machine)       AS avg_embodied_carbon_share_machine,
+  AVG(cpu_time_powermetrics_vm)            AS avg_cpu_time_powermetrics_vm,
+  AVG(gpu_power_powermetrics_component)    AS avg_gpu_power_powermetrics_component,
+  AVG(cpu_utilization_mach_system)         AS avg_cpu_utilization_mach_system,
+  AVG(disk_io_bytesread_powermetrics_vm)   AS avg_disk_io_bytesread_powermetrics_vm,
+  AVG(cores_carbon_powermetrics_component) AS avg_cores_carbon_powermetrics_component,
+  AVG(gpu_energy_powermetrics_component)   AS avg_gpu_energy_powermetrics_component,
+  AVG(cores_energy_powermetrics_component) AS avg_cores_energy_powermetrics_component
 FROM valid_runs
 GROUP BY name
 ORDER BY name
