@@ -40,5 +40,5 @@
     ORDER BY
         r.created_at
 )
-TO '/Users/claracornut/gmt/runs_detail_runtime.csv'
+TO '/Users/claracornut/gmt/csv files/runs_detail_runtime.csv'
 WITH CSV HEADER;

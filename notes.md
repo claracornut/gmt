@@ -35,7 +35,7 @@ docker compose restart
 sudo reboot
 ```
 
-### Options de lancement pour déboguer
+### Options de lancement pour débeuguer
 ```bash
 # Avec sudo (éviter les problèmes d'autorisation)
 sudo python3 runner.py --uri ~/gmt --name "debug"
@@ -88,6 +88,17 @@ ytb-noAddBlock-v3
 ytb-premium-v3
 
 ```
+### Lignes de commandes :
+```
+python3 runner.py --uri ~/gmt2/GMTytbAdBlockPlus --name "ytb-AdBlockPlus-v3"
+python3 runner.py --uri ~/gmt2/GMTytbAdGuard --name "ytb-AdGuard-v3"
+python3 runner.py --uri ~/gmt2/GMTytbFree --name "ytb-noAddBlock-v3"
+python3 runner.py --uri ~/gmt2/GMTytbPremium --name "ytb-premium-v3"
+python3 runner.py --uri ~/gmt2/GMTytbUblockOrigin --name "ytb-Ublock-v3"
+
+
+```
+
 
 ## Base de données
 
